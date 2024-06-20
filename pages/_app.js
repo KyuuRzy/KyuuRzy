@@ -9,9 +9,13 @@ function MyApp({ Component, pageProps }) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [customCursor, setCustomCursor] = useState('default');
 
-  setTimeout(() => {
-    setLoading(false);
-  }, 3800);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3800);
+
+    return () => clearTimeout(timer); // Clean up timeout on component unmount
+  }, []);
 
   useEffect(() => {
     const mouseMove = (e) => setMousePosition({ x: e.clientX, y: e.clientY });
@@ -29,17 +33,17 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      (
-        <>
-          <div onMouseEnter={cursorIn} onMouseLeave={cursorOut}>
-            <Header />
-            <Component {...pageProps} />
-            <Footer />
-          </div>
+      <div onMouseEnter={cursorIn} onMouseLeave={cursorOut}>
+        <Header />
+        <Component {...pageProps} />
+        <Footer />
+      </div>
 
-          <motion.div className="pointer-events-none fixed left-0 top-0 z-50 h-11 w-11 rounded-full bg-primary-light" variants={cursorVariants} animate={customCursor} />
-        </>
-      )}
+      <motion.div
+        className="pointer-events-none fixed left-0 top-0 z-50 h-11 w-11 rounded-full bg-primary-light"
+        variants={cursorVariants}
+        animate={customCursor}
+      />
     </>
   );
 }
