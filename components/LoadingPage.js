@@ -12,7 +12,7 @@ const LoadingPage = () => {
   return (
     <Layouts>
       <div className="relative flex h-screen w-full items-center justify-center">
-        <svg width="207" height="56" viewBox="0 0 207 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        //<svg width="207" height="56" viewBox="0 0 207 56" fill="none" xmlns="http://www.w3.org/2000/svg">
           <AnimatePresence>
             {show && (
               <motion.path
