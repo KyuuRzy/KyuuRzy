@@ -1,23 +1,23 @@
 export const Projects = [
   {
     id: 1,
-    name: 'Api Ai',
+    name: 'Website Gabut',
     slug: 'sgcid',
     img: 'sgcid',
-    demo: 'https://rammpntxxx-llma.hf.space/generate?text=hello&prompt=hi',
-    sourceCode: 'https://groq.com/',
+    demo: 'https://menyala.vercel.app',
+    sourceCode: 'https://menyala.vercel.app',
     description:
-      'Ai api based on Groq',
+      'Sebuah Website Gabut Yang Fi penuhi Kata Kata (quotes) para creator Bot WhatsApp !!',
   },
   {
-    id: 2,
-    name: 'R-BOT',
-    slug: 'ceritain',
-    img: 'ceritain',
-    demo: 'https://wa.me/6283872614230',
-    sourceCode: 'https://github.com/rasssya76/R-BOT',
+    id: 3,
+    name: 'Coming Soon Project',
+    slug: 'coming-soon-project',
+    img: 'coming-soon',
+    demo: '#',
+    sourceCode: '#',
     description:
-      'R-BOT is an existing bot from 2021 that is powered using nodejs runtime',
+      'Nantikan project-project mendatang lainnya.',
   },
   {
     id: 3,
